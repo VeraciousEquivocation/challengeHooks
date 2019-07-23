@@ -1,0 +1,132 @@
+.container {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    display: grid;
+    grid-template-columns: repeat(5, 180px);
+    grid-template-rows: auto auto auto auto auto;
+    max-width:1200px;
+    margin: 36px auto;
+    justify-items: center;
+    justify-content: center;
+    grid-gap: 8px;
+    gap: 8px;
+}
+.spinnerDiv {
+    display:flex;
+    align-items:center;
+    justify-content: center;
+    height:100%;
+    width:100%;
+    position: absolute;
+    color: #87CB9C;
+}
+@media(max-width: 786px) {
+    .container {
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: auto auto auto auto auto;
+    }
+}
+@media(max-width: 590px) {
+    .container {
+        grid-template-columns: repeat(2, 180px);
+        grid-template-rows: auto auto auto auto auto;
+    }
+}
+@media(max-width: 430px) {
+    .container {
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: auto auto auto auto auto;
+    }
+}
+.element {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    margin: 0 10px;
+    background-color: #87CB9C;
+  }
+  .element3 {
+    animation-name: stretch;
+    animation-duration: 0.9s; 
+    animation-timing-function: ease-out; 
+    animation-delay: 0;
+    animation-iteration-count: infinite;
+    animation-fill-mode: none;
+    animation-play-state: running;
+  }
+  
+  .element2 {
+    animation-name: stretch2;
+    animation-duration: 0.9s; 
+    animation-timing-function: ease-out; 
+    animation-delay: 0;
+    animation-iteration-count: infinite;
+    animation-fill-mode: none;
+    animation-play-state: running;
+    animation-delay: 50ms;
+  }
+  .element1 {
+    animation-name: stretch1;
+    animation-duration: 0.9s; 
+    animation-timing-function: ease-out; 
+    animation-delay: 0;
+    animation-iteration-count: infinite;
+    animation-fill-mode: none;
+    animation-play-state: running;
+    animation-delay: 100ms;
+  }
+  .element0 {
+    animation-name: stretch0;
+    animation-duration: 0.9s; 
+    animation-timing-function: ease-out; 
+    animation-delay: 0;
+  /*   animation-direction: alternate; */
+    animation-iteration-count: infinite;
+    animation-fill-mode: none;
+    animation-play-state: running;
+    animation-delay: 150ms;
+  }
+  @keyframes stretch {
+    0% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0.1;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+  @keyframes stretch2 {
+    0% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0.2;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+  @keyframes stretch1 {
+    0% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0.4;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+  @keyframes stretch0 {
+    0% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0.5;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
